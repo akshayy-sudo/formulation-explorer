@@ -109,14 +109,14 @@ export function StepGraphs({
                   z: grid.z,
                   colorscale: COLORSCALE,
                   contours: { z: { show: true, usecolormap: true, project: { z: true } } },
-                  colorbar: { title: `${label} (%)` },
+                  colorbar: { title: { text: `${label} (%)` } },
                 },
               ]}
               layout={{
                 scene: {
-                  xaxis: { title: `${names[fx]} (g)` },
-                  yaxis: { title: `${names[fy]} (g)` },
-                  zaxis: { title: `${label} (%)` },
+                  xaxis: { title: { text: `${names[fx]} (g)` } },
+                  yaxis: { title: { text: `${names[fy]} (g)` } },
+                  zaxis: { title: { text: `${label} (%)` } },
                 },
                 margin: { l: 0, r: 0, t: 10, b: 0 },
               }}
@@ -136,7 +136,7 @@ export function StepGraphs({
                   z: grid.z,
                   colorscale: COLORSCALE,
                   contours: { showlabels: true, labelfont: { size: 10, color: "#0b0f0c" } },
-                  colorbar: { title: `${label} (%)` },
+                  colorbar: { title: { text: `${label} (%)` } },
                 },
                 {
                   type: "scatter",
@@ -148,8 +148,8 @@ export function StepGraphs({
                 },
               ]}
               layout={{
-                xaxis: { title: `${names[fx]} (g)` },
-                yaxis: { title: `${names[fy]} (g)` },
+                xaxis: { title: { text: `${names[fx]} (g)` } },
+                yaxis: { title: { text: `${names[fy]} (g)` } },
               }}
             />
           ) : null}
@@ -190,8 +190,8 @@ export function StepGraphs({
               },
             ]}
             layout={{
-              xaxis: { title: `Measured ${label} (%)` },
-              yaxis: { title: `Predicted ${label} (%)` },
+              xaxis: { title: { text: `Measured ${label} (%)` } },
+              yaxis: { title: { text: `Predicted ${label} (%)` } },
             }}
           />
         </TabsContent>
